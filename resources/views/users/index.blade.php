@@ -31,7 +31,17 @@
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>                                
                                 <td>{{ $user->email }}</td>
-                                <td>Eliminar</td>
+                                <td>
+                                    <form action="{{ route('users.destroy', $user) }}" method="POST">
+                                        @method('DELETE')
+                                        @csrf
+                                        <input
+                                            type="submit"
+                                            value="Eliminar"
+                                            class="btn btn-sm btn-danger"
+                                            onclick="return confirm('¿Seguro que desea eliminar?')">
+                                    </form>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
