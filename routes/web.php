@@ -18,3 +18,7 @@ Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
 Route::get('/gamba', 'GambaController@index');
 Route::post('/gambas', 'GambaController@store')->name('gambas.store');
 Route::delete('/gambas/{gamba}', 'GambaController@destroy')->name('gambas.destroy');
+
+Route::get('/vacuna', 'VacunaController@index');
+Route::post('/vacunas', 'VacunaController@store')->name('vacunas.store');
+Route::delete('/vacunas/{vacuna}', 'VacunaController@destroy')->name('vacunas.destroy');
