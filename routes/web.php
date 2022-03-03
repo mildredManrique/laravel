@@ -22,3 +22,8 @@ Route::delete('/gambas/{gamba}', 'GambaController@destroy')->name('gambas.destro
 Route::get('/vacuna', 'VacunaController@index');
 Route::post('/vacunas', 'VacunaController@store')->name('vacunas.store');
 Route::delete('/vacunas/{vacuna}', 'VacunaController@destroy')->name('vacunas.destroy');
+
+Route::get('/pokemon', 'PokemonController@index');
+Route::post('/pokemones', 'PokemonController@store')->name('pokemones.store');
+Route::delete('/pokemones/{pokemon}', 'PokemonController@destroy')->name('pokemones.destroy');
+
